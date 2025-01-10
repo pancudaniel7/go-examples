@@ -1,6 +1,10 @@
 package internal
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"sync"
+)
 
 // SquaringNumbers Squaring numbers
 func SquaringNumbers() {
@@ -25,4 +29,25 @@ func SquaringNumbers() {
 		}
 		close(out)
 	}()
+}
+
+// SimpleWaitGroup Simple waitGroup
+func SimpleWaitGroup() {
+	var wg sync.WaitGroup
+
+	for i := 0; i < 10; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			fmt.Println(rand.Intn(100))
+		}()
+	}
+
+	wg.Wait()
+	fmt.Println("All goroutines finished")
+}
+
+// FanInFanOut Fan in fan out
+func FanInFanOut() {
+
 }
