@@ -14,10 +14,10 @@ func LowerCase(value string) string {
 	return strings.ToLower(value)
 }
 
-func Concat(value string, conct string) string {
+func Concat(value string, concat string) string {
 	var sb strings.Builder
 	sb.WriteString(value)
-	sb.WriteString(conct)
+	sb.WriteString(concat)
 	return sb.String()
 }
 

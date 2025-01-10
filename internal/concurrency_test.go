@@ -9,3 +9,7 @@ func TestMyFunc(t *testing.T) {
 func TestSimpleWaitGroup(t *testing.T) {
 	SimpleWaitGroup()
 }
+
+func TestFanInFanOut(t *testing.T) {
+	FanInFanOut()
+}
