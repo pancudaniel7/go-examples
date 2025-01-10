@@ -1,11 +1,9 @@
 package main
 
 import (
-    "fmt"
-    "my-go-project/internal/config"
+	"fmt"
 )
 
 func main() {
-    cfg := config.LoadConfig()
-    fmt.Println("App running with config:", cfg)
+	fmt.Println("App running with config:")
 }
